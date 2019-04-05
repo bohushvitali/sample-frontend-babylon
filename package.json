@@ -1,0 +1,41 @@
+{
+    "name": "babylonjs-game-starter",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "cross-env NODE_ENV=production webpack --mode production --config ./configs/webpack.config.prod.js",
+        "start": "cross-env NODE_ENV=dev webpack-dev-server --mode development --watch --inline --open --config ./configs/webpack.config.dev.js",
+        "predeploy": "firebase use --token $FIREBASE_DEPLOY_KEY $CI_ENVIRONMENT_SLUG",
+        "deploy": "firebase deploy --non-interactive --token $FIREBASE_DEPLOY_KEY"
+    },
+    "devDependencies": {
+        "clean-webpack-plugin": "^2.0.1",
+        "compression-webpack-plugin": "^2.0.0",
+        "copy-webpack-plugin": "^5.0.2",
+        "cross-env": "^5.2.0",
+        "firebase-tools": "^6.5.2",
+        "html-webpack-plugin": "3.2.0",
+        "offline-plugin": "^5.0.6",
+        "progress-bar-webpack-plugin": "^1.12.1",
+        "ts-loader": "5.3.3",
+        "typescript": "3.4.1",
+        "uglifyjs-webpack-plugin": "^2.1.2",
+        "webpack": "4.29.6",
+        "webpack-bundle-analyzer": "^3.1.0",
+        "webpack-cli": "3.3.0",
+        "webpack-dev-server": "3.2.1",
+        "webpack-glsl-loader": "^1.0.1",
+        "webpack-merge": "^4.2.1",
+        "workbox-google-analytics": "^4.2.0",
+        "workbox-webpack-plugin": "^4.2.0"
+    },
+    "dependencies": {
+        "babylonjs": "3.3.0",
+        "babylonjs-gui": "^3.3.0",
+        "babylonjs-loaders": "^3.3.0",
+        "babylonjs-materials": "^3.3.0",
+        "cannon": "^0.6.2",
+        "rxjs": "^6.4.0"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "types": [
+            "babylonjs",
+            "babylonjs-gui",
+            "babylonjs-materials"
+        ],
+        "lib": [
+            "es2016",
+            "dom"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
